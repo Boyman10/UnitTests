@@ -12,7 +12,7 @@ public class App
         System.out.println("Hello".isBlank());
     }
 
-    public String getStr(String entry) {
+    public String getStr(final String entry) {
         return "Hello " + entry;
     }
 }

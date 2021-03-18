@@ -21,6 +21,15 @@ ex: [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 
 = Test coverage
 
+## intelliJ
+
+> Run with Coverage 
+
+ex: 100% on class 50% on methods 75% on lines
+
+## Maven
+
+
 https://www.baeldung.com/jacoco
 
 Put the plugin within plugins in build section without pluginManagement which could be set on a parent pom.
@@ -30,18 +39,48 @@ Put the plugin within plugins in build section without pluginManagement which co
 -> observe the output but also the report saved inside site/jacoco
 
 Add check execution for mandatory minimum coverage !
-Then : 
+Then :
 > mvn clean verify
 
 ex:
 [ERROR] Failed to execute goal org.jacoco:jacoco-maven-plugin:0.8.6:check (jacoco-check) on project UnitTestProject: Coverage checks have not been met. See log for details. -> [Help 1]
 
 
-## intelliJ
+# CheckStyle
 
-> Run with Coverage 
+https://maven.apache.org/plugins/maven-checkstyle-plugin/usage.html
+https://checkstyle.sourceforge.io/
 
-ex: 100% on class 50% on methods 75% on lines
+add reporting section inside pom
 
-## Maven
+Check styles from Google for instance. Default is sun.
 
+>     mvn site
+[INFO] There are 13 errors reported by Checkstyle 8.29 with sun_checks.xml ruleset.
+
+http://localhost:63342/UnitTestProject/target/site/checkstyle.html
+
+# Owasp
+
+https://owasp.org/www-project-dependency-check/
+
+https://jeremylong.github.io/DependencyCheck/dependency-check-maven/index.html
+
+Aggregate within site report (reporting section)
+
+> mvn site
+ 
+ /target/site/dependency-check-report.html
+
+# SpotBugs
+
+FindBugs is no longer maintained
+
+https://gleclaire.github.io/findbugs-maven-plugin/
+https://spotbugs.github.io/
+
+## Various goals 
+
+https://spotbugs.github.io/spotbugs-maven-plugin/plugin-info.html
+
+> mvn spotbugs:check
