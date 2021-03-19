@@ -79,8 +79,16 @@ FindBugs is no longer maintained
 https://gleclaire.github.io/findbugs-maven-plugin/
 https://spotbugs.github.io/
 
-## Various goals 
+## Various goals
 
 https://spotbugs.github.io/spotbugs-maven-plugin/plugin-info.html
 
 > mvn spotbugs:check
+> mvn spotbugs:gui
+> mvn site
+
+# Execute java program using maven
+
+https://www.mojohaus.org/exec-maven-plugin/
+
+> mvn exec:java
